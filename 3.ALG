@@ -1,0 +1,19 @@
+Algoritmo "media"
+
+Var
+   nota1, nota2, nota3, media: real
+
+Inicio
+      escreva("Nota 1: ")
+      leia(nota1)
+      escreva("Nota 2: ")
+      leia(nota2)
+      escreva("Nota 3: ")
+      leia(nota3)
+      
+      media <- (nota1 + nota2 + nota3) / 3
+      
+      escreval()
+      escreval("A média das notas do aluno é de ", media:1:1)
+
+Fimalgoritmo
