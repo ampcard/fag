@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Exercício 10</title>
+	</head>
+	<body>
+		<script>
+			let tempo_segundos = parseInt(window.prompt("Tempo do evento em segundos"));
+
+			let horas = parseInt(tempo_segundos / 3600);
+			let minutos = parseInt((tempo_segundos % 3600) / 60);
+			let segundos = tempo_segundos - (horas * 3600 + minutos * 60);
+
+			console.log("A duração do evento será de " + horas + " hora(s), " + minutos + " minuto(s) e " + segundos + " segundo(s).");
+
+			/*
+            alert("A duração do evento será de " + horas + " hora(s), " + minutos + " minuto(s) e " + segundos + " segundo(s).");
+            */
+		</script>
+	</body>
+</html>

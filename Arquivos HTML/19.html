@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19</title>
+</head>
+<body>
+    <script>
+        let hoje = new Date();
+        let ano_atual = hoje.getFullYear();
+        let mes_atual = hoje.getMonth() + 1;
+        let dia_atual = hoje.getDate();
+
+        let ano_nasc = parseInt(window.prompt("Ano de nascimento"));
+        let mes_nasc = parseInt(window.prompt("Mês de nascimento [1-12]"));
+        let dia_nasc = parseInt(window.prompt("Dia de nascimento"));
+
+        let idade_dias = (ano_atual - ano_nasc) * 365 + (mes_atual - mes_nasc) * 30 + (dia_atual - dia_nasc);
+
+        console.log("Você já viveu " + idade_dias + " dias!");
+
+        /*
+        alert("Você já viveu " + idade_dias + " dias!");
+        */
+    </script>
+</body>
+</html>
