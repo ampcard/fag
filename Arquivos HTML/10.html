@@ -12,6 +12,7 @@
 
 			let horas = parseInt(tempo_segundos / 3600);
 			let minutos = parseInt((tempo_segundos % 3600) / 60);
+			// let segundos = parseInt((tempo_segundos % 3600) % 60);
 			let segundos = tempo_segundos - (horas * 3600 + minutos * 60);
 
 			console.log("A duração do evento será de " + horas + " hora(s), " + minutos + " minuto(s) e " + segundos + " segundo(s).");
