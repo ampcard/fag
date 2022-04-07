@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(window.prompt("Valor de A:"))
+        let b = parseFloat(window.prompt("Valor de B:"))
+        let c = parseFloat(window.prompt("Valor de C:"))
+
+        let tipo_triangulo;
+
+        if ((a < (b + c)) && (b < (a + c)) && (c < a + b)) {
+
+            if ((a == b) && (b == c)) {
+                tipo_triangulo = "equilátero";
+            } else if ((a != b) && (b != c) && (c != a)) {
+                tipo_triangulo = "escaleno";
+            } else {
+                tipo_triangulo = "isósceles";
+            }
+
+            console.log("As três medidas podem formar um triângulo " + tipo_triangulo);
+        } else {
+            console.log("As três medidas não podem formar um triângulo.");
+        }
+    </script>
+</body>
+</html>

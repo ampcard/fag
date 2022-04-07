@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 16</title>
+</head>
+<body>
+    <script>
+        // na lista está como ex.14, vou continuar minha contagem normal aqui, exercício 16
+
+        let idade = parseInt(window.prompt("Idade do nadador"));
+
+        console.log("Categoria:");
+
+        if ((idade >= 5) && (idade <= 7)) {
+            console.log("Infaltil A");
+        } else if ((idade >= 8) && (idade <= 10)) {
+            console.log("Infaltil B");
+        } else if ((idade >= 11) && (idade <= 13)) {
+            console.log("Juvenil A");
+        } else if ((idade >= 14) && (idade <= 17)) {
+            console.log("Juvenil B");
+        } else if (idade >= 18) {
+            console.log("Adulto");
+        } else {
+            console.log("O nadador não se classifica para nenhuma categoria.");
+        }
+    </script>
+</body>
+</html>

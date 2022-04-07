@@ -12,9 +12,26 @@
         let n2 = parseInt(window.prompt("Segundo valor"));
         let n3 = parseInt(window.prompt("Terceiro valor"));
 
-        if (n1 > n2 > n3) {
-            console.log(n3 + " → " + n2 + " → " + n1)
+        let maior = n1;
+        let menor = n1;
+
+        // verificando o maior valor
+        if (n2 > maior) {
+            maior = n2;
         }
+        if (n3 > maior) {
+            maior = n3;
+        }
+
+        // verificando o menor valor
+        if (n2 < menor) {
+            menor = n2;
+        }
+        if (n3 < menor) {
+            menor = n3;
+        }
+
+        console.log("Menor valor: " + menor + "\nMaior valor: " + maior);
     </script>
 </body>
 </html>
