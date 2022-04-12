@@ -16,18 +16,19 @@
 
         if ((codigo_produto == 001) || (codigo_produto == 004)) {
             valor = 5.32;
+            preco = (valor * quantidade);
+            console.log("O preço total será de R$" + preco.toFixed(2));
         } else if ((codigo_produto == 002) || (codigo_produto == 005)) {
             valor = 6.45;
+            preco = (valor * quantidade);
+            console.log("O preço total será de R$" + preco.toFixed(2));
         } else if (codigo_produto == 003) {
             valor = 2.37;
+            preco = (valor * quantidade);
+            console.log("O preço total será de R$" + preco.toFixed(2));
         } else {
             console.log("Código do produto inválido!");
         }
-
-        preco = (valor * quantidade);
-
-        console.log("O preço total será de R$" + preco.toFixed(2));
-        
     </script>
 </body>
 </html>
