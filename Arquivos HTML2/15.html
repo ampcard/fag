@@ -13,21 +13,12 @@
         let n1 = parseInt(window.prompt("Digite um número"));
         let n2 = parseInt(window.prompt("Digite outro número"));
 
-        maior = n1;
-        menor = n1;
-
-        if (n2 > maior) {
-            maior = n2;
-        }
-
-        if (n2 < menor) {
-            menor = n2;
-        }
-
-        if (n1 != n2) {
-            console.log(maior + " - " + menor + " = " + (maior - menor));
+        if (n1 > n2) {
+            console.log(n1 + " - " + n2 + " = " + (n1 - n2));
+        } else if (n2 > n1) {
+            console.log(n2 + " - " + n1 + " = " + (n2 - n1));
         } else {
-            console.log("Os dois números são iguais!\nResultado da subtração: 0");
+            console.log("Os dois números são iguais.\nResultado da subtração: 0");
         }
     </script>
 </body>
