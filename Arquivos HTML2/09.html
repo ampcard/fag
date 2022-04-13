@@ -8,14 +8,14 @@
 </head>
 <body>
     <script>
-        let nota1 = parseFloat(window.prompt("Primeira nota [0-10]"));
-        let nota2 = parseFloat(window.prompt("Segunda nota [0-10]"));
+        let nota1 = parseFloat(window.prompt("Primeira nota"));
+        let nota2 = parseFloat(window.prompt("Segunda nota"));
 
         let media = (nota1 + nota2) / 2;
 
-        if (media >= 7) {
+        if ((media >= 7) || (media >= 70)) {
             console.log("Aprovado");
-        } else if (media < 4) {
+        } else if ((media < 4) || (media < 40)) {
             console.log("Reprovado");
         } else {
             console.log("Exame");
