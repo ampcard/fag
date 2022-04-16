@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(window.prompt("Comprimento do primeiro lado do triângulo"));
+        let b = parseFloat(window.prompt("Comprimento do segundo lado do triângulo"));
+        let c = parseFloat(window.prompt("Comprimento do terceiro lado do triângulo"));
+
+        let tipo_triangulo
+
+        if ((a < (b + c)) && (b < (a + c)) && (c < (a + b))) {
+            
+            if ((a == b) && (b == c)) {
+                tipo_triangulo = "equilátero";
+            } else if ((a != b) && (b != c) && (c != a)) {
+                tipo_triangulo = "escaleno";
+            } else {
+                tipo_triangulo = "isósceles";
+            }
+
+            console.log("As medidas informadas podem formar um triângulo " + tipo_triangulo);
+        } else {
+            console.log("As medidas informadas não podem formar um triângulo");
+        }
+    </script>
+</body>
+</html>

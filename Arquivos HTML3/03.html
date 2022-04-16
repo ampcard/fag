@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,14 @@
 </head>
 <body>
     <script>
-        
+        let deposito = parseFloat(window.prompt("Valor do depósito em reais"));
+        let taxa_juros = parseFloat(window.prompt("Taxa de juros diário em %"));
+
+        let valor_atualizado = (deposito + (deposito * (taxa_juros / 100)) * 30)
+
+        console.log("Valor inicial: R$" + deposito);
+        console.log("Valor atualizado: R$" + valor_atualizado);
+        console.log("Rendimento: R$" + (valor_atualizado - deposito));
     </script>
 </body>
 </html>

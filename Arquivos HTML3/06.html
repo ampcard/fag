@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+<body>
+    <script>
+        let maiores = [];
+        let idade;
+
+        for (let i = 1; i <= 10; i++) {
+            idade = (parseInt(window.prompt("Idade da " + i + "ª pessoa")) > 21) ? maiores.push(idade) : null;
+        }
+
+        console.log("Ao todo, foram " + maiores.length + " pessoas maiores de 21 anos.");
+    </script>
+</body>
+</html>
