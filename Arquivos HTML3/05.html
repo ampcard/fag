@@ -8,10 +8,10 @@
 </head>
 <body>
     <script>
-        let altura = (parseFloat(window.prompt("Informe a altura em cm")));
+        let altura = parseFloat(window.prompt("Informe a altura em cm"));
 
         //charAt para pegar apenas o caractere no primeiro indice
-        let sexo = (window.prompt("Informe o sexo [M / F]").toUpperCase()).charAt(0);
+        let sexo = window.prompt("Informe o sexo [M / F]").toUpperCase().charAt(0);
 
         if (sexo == "M") {
             // achei essas duas fórmulas, então resolvi deixar ambas pra ter uma margem no peso ideal
