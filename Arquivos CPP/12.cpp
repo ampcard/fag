@@ -1,7 +1,7 @@
-#include <iostream> // input e output
-#include <iomanip> // setprecision() e fixed
-#include <windows.h> // utf-8
-#include <cmath> // pow() e sqrt()
+#include <iostream>
+#include <iomanip>
+#include <windows.h>
+#include <cmath>
 
 #pragma execution_character_set("utf-8")
 
