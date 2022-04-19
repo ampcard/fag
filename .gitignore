@@ -1,4 +1,5 @@
-
+*.exe
+.vscode
 Arquivos HTML.rar
 Arquivos HTML2.rar
 Arquivos HTML/a.py
