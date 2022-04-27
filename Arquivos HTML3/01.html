@@ -17,7 +17,7 @@
         let presencas_aluno = parseInt(window.prompt("Quantidade de presenças do acadêmico"));
 
         let media = ((nota1 + nota2 + nota3 + nota4) / 4);
-        let presenca = total_aulas - (presencas_aluno / 100);
+        let presenca = (100 * presencas_aluno) / total_aulas;
 
         console.log("Aluno: " + nome + "\nMedia: " + media);
 
@@ -26,9 +26,6 @@
         } else {
             console.log("Reprovado");
         }
-
-        console.log(media);
-        console.log(presenca);
     </script>
 </body>
 </html>
