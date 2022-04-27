@@ -115,7 +115,7 @@ function FibonnaciUpToN(num) {
 }
 
 
-function FibonnaciUpToNthTermsUsingArray(num) {
+function FibonnaciUpToNthTermUsingArray(num) {
     let temp;
     let a = 0;
     let b = 1;
@@ -140,7 +140,7 @@ function FibonnaciUpToNthTermsUsingArray(num) {
 }
 
 
-function FibonnaciUpToNthTerms(num) {
+function FibonnaciUpToNthTerm(num) {
     let temp;
     let a = 0;
     let b = 1;
