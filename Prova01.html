@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova André</title>
+</head>
+<body>
+    <script>
+        mensagem_erro_unidades = "Por favor, informe um número inteiro e positivo!";
+        mensagem_erro_opcao = "Alternativa inválida!";
+
+
+        function Continuar() {
+            opcao = window.prompt("Deseja verificar outro pedido: [S / N]").toUpperCase()[0]; // pega só a letra no primeiro index
+
+            if (opcao == "S") {
+                EntradaUnidades();
+            } else if (opcao == "N") {
+                
+            } else {
+                alert(mensagem_erro_opcao);
+                Continuar();
+            }
+        }
+
+        
+        function CalcularPerdaFio(arr, tamanho) {
+            let perda;
+            
+            if (tamanho == "P") {
+                perda = 3.3;
+                // soma o percentual de perda na qtde de fio e depois subtrai pelo valor inicial de perda
+                return (((arr[0] + (arr[0] * (perda / 100))) - arr[0]) / 1000).toFixed(2);
+            } else if (tamanho == "M") {
+                perda = 4.25;
+                return (((arr[1] + (arr[1] * (perda / 100))) - arr[1]) / 1000).toFixed(2);
+            } else if (tamanho == "G") {
+                perda_cm = 42000;
+                percentual_perda = ((perda_cm) / 9986).toFixed(2);
+                return [percentual_perda, (((arr[2] + (arr[2] * (percentual_perda / 100))) - arr[2]) / 1000).toFixed(2)];
+            } else {}
+        }
+        
+        
+        function CalcularMetragemFio(qtde) {
+            let tamanho_P = 3972;
+            let tamanho_M = 7920;
+            let tamanho_G = 9986;
+
+            tamanho_P = tamanho_P * qtde;
+            tamanho_M = tamanho_M * qtde;
+            tamanho_G = tamanho_G * qtde;
+            total = (tamanho_P + tamanho_M + tamanho_G);
+
+            return [tamanho_P, tamanho_M, tamanho_G, total];
+        }
+        
+
+        function SelecionarAlternativa(unidades) {
+            // esqueci como faz pra quebrar string 
+            let opcao = window.prompt("Informe a alternativa que deseja ver:\n\na) Percentual de perda do casaco G ao final do pedido.\nb) Quantos quilômetros de lã são perdidos na confecção do casaco M.\nc) Quantos quilômetros de fio são utilizados no total ao final do pedido.\nd) Quantos quilômetros de fio é perdido na confecção do casaco P e G.").toUpperCase();
+            
+            if (opcao == "A") {
+                perda_G = CalcularPerdaFio(CalcularMetragemFio(unidades), "G");
+                alert("Percentual de perda do casaco G: " + perda_G[0] + "%");
+                Continuar();
+            } else if (opcao == "B") {
+                perda = CalcularPerdaFio(CalcularMetragemFio(unidades), "M");
+                alert("Perda fio casaco M: " + perda + " quilômetros");
+                Continuar();
+            } else if (opcao == "C") {
+                total = CalcularMetragemFio(unidades)[3];
+                alert("Quantidade total de fio utilizado: " + total + " quilômetros");
+                Continuar();
+            } else if (opcao == "D") {
+                perda_P = CalcularPerdaFio(CalcularMetragemFio(unidades), "P");
+                perda_G = CalcularPerdaFio(CalcularMetragemFio(unidades), "G");
+                alert("Perda fio casaco P: " + perda_P +" quilômetros\nPerda fio casaco G: " + perda_G[1] + " quilômetros\nTotal de perda: " + (parseFloat(perda_P) + parseFloat(perda_G[1])).toFixed(2) + " quilômetros");
+                Continuar();
+            } else {
+                alert(mensagem_erro_opcao);
+                SelecionarAlternativa();
+            }
+        }
+
+
+        function EntradaUnidades() {
+            let n = parseInt(window.prompt("Informe quantas unidades"));
+
+            if (n < 1) {
+                alert(mensagem_erro_unidades);
+                EntradaUnidades();
+            } else if (n >= 1) {
+                SelecionarAlternativa(n);
+            } else {
+                alert(mensagem_erro_unidades);
+                EntradaUnidades();
+            }
+        }
+        
+
+        EntradaUnidades()
+    </script>
+</body>
+</html>
