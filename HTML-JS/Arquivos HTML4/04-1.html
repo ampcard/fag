@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04-1</title>
+</head>
+<body>
+    <script>
+        let n1 = parseInt(window.prompt("Insira a base"));
+        let n2 = parseInt(window.prompt("Insira o expoente"));
+        let resultado = n1;
+
+        for(let i = 1; i < n2; i++) {
+            resultado *= n1;
+        }
+
+        console.log(n1 + " ^ " + n2 + " = " + resultado);
+    </script>
+</body>
+</html>

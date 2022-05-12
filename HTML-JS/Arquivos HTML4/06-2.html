@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06-2</title>
+</head>
+<body>
+    <script>
+        let maior, menor;
+        let soma = 0;
+        let cont = 1;
+
+        while(true) {
+            let n = parseFloat(window.prompt("Informe o " + cont + "° número: "));
+
+            if (cont == 1) {
+                maior = n;
+                menor = n
+            } else {
+                if (n > maior) {
+                    maior = n;
+                }
+                if (n < menor) {
+                    menor = n;
+                }
+            }
+
+            soma += n;
+            
+            let opcao = window.prompt("Deseja continuar? [S / N]").toUpperCase()[0];
+
+            if (opcao == "N") {
+                break
+            }
+
+            cont++;
+        }
+
+        console.log("Maior valor: " + maior);
+        console.log("Menor valor: " + menor);
+        console.log("Soma dos valores digitados: " + soma);
+    </script>
+</body>
+</html>
