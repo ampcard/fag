@@ -28,7 +28,7 @@ function calculatePercentage(menor, maior) {
     let porcentagem = (menor / maior) * 100;
 
     // * verificação pra não mostrar as casas decimais, caso elas sejam igual a 0
-    alert(`${menor} equivale a ${(porcentagem % 1 != 0) ? porcentagem.toFixed(4) : porcentagem}% de ${maior}`)
+    alert(`${menor} equivale a ${(porcentagem % 1 != 0) ? porcentagem.toFixed(4) : porcentagem.toFixed(1)}% de ${maior}`)
 }
 
 getNumbers();
