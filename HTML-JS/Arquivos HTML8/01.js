@@ -99,7 +99,7 @@ function multiplicacao(n1, n2) {
 
 
 function divisao(n1, n2) {
-    return ((n1 / n2) == Infinity) ? "Impossível dividir por 0!" : ((n1 / n2) % 1 != 0) ? (n1 / n2).toFixed(4) : (n1 / n2).toFixed(1);
+    return ((n1 / n2) == Infinity) ? "Impossível dividir por 0!" : ((n1 / n2) % 1 != 0) ? (n1 / n2).toFixed(4) : (n1 / n2);
 }
 
 
