@@ -4,14 +4,14 @@ function userInput(x = null, y = null) {
     if (x == null || y == null) {
         n1 = Number(window.prompt("Primeiro número"));
 
-        if (!numberValidation(n1)) {
+        if (numberValidation(n1)) {
             alert("Insira um número!");
             userInput();
         }
 
         n2 = Number(window.prompt("Segundo número"));
 
-        if (!numberValidation(n2)) {
+        if (numberValidation(n2)) {
             alert("Insira um número!");
             userInput();
         }
@@ -76,10 +76,10 @@ function tryAgain(x, y) {
 
 function numberValidation(x) {
     if (isNaN(x)) {
-        return false;
+        return true;
     }
 
-    return true;
+    return false;
 }
 
 
@@ -99,7 +99,7 @@ function multiplicacao(n1, n2) {
 
 
 function divisao(n1, n2) {
-    return ((n1 / n2) == Infinity) ? "Impossível dividir por 0!" : ((n1 / n2) % 1 != 0) ? (n1 / n2).toFixed(4) : (n1 / n2);
+    return (!isFinite(n1 / n2)) ? "Impossível dividir por 0!" : ((n1 / n2) % 1 != 0) ? (n1 / n2).toFixed(4) : (n1 / n2);
 }
 
 
