@@ -8,10 +8,24 @@ function fibonacci(num) {
     }
 }
 
+function fibonacciMemo(num, memo) {
+    memo = memo || {};
+
+    if (memo[num]) {
+        return memo[num];
+    }
+
+    if(num < 2) {
+        return 1;
+    } else {
+        return memo[num] = fibonacciMemo(num - 1, memo) + fibonacciMemo(num - 2, memo);
+    }
+}
+
 let resultado = [];
 
-for(let i = 0; i < 7; i++) {
-    resultado.push(fibonacci(i));
+for(let i = 0; i < 100; i++) {
+    resultado.push(fibonacciMemo(i));
 }
 
 alert(resultado.join(" → "));
