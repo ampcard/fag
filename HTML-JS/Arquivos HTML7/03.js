@@ -1,5 +1,3 @@
-// Pfeffer
-
 function getNumbers() {
     let n1 = parseFloat(window.prompt("Primeiro valor"));
     let n2 = parseFloat(window.prompt("Segundo valor"));
