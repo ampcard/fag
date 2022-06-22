@@ -1,5 +1,3 @@
-// Pfeffer
-
 function fibonacci(num) {
     if(num < 2) {
         return num;
@@ -8,6 +6,8 @@ function fibonacci(num) {
     }
 }
 
+
+// essa função fibonacciMemo foi um teste que eu fiz usando memoization, caso alguém do curso esteja olhando meu repositório e se deparou com isso, entenda sozinho, porque eu não vou explicar (10 conto no pix eu explico)
 function fibonacciMemo(num, memo) {
     memo = memo || {};
 
@@ -24,8 +24,8 @@ function fibonacciMemo(num, memo) {
 
 let resultado = [];
 
-for(let i = 0; i < 100; i++) {
-    resultado.push(fibonacciMemo(i));
+for(let i = 0; i < 8; i++) {
+    resultado.push(fibonacci(i));
 }
 
 alert(resultado.join(" → "));

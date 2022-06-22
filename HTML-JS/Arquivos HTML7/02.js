@@ -18,8 +18,6 @@ function getUserInput() {
         } else if (saldo > 600) {
             credito = saldo * (40 / 100);
             faixas[3] += 1;
-        } else {
-            alert("aqui");
         }
 
         console.log(`Saldo médio: R$${saldo.toFixed(2)}\nCrédito: R$${credito.toFixed(2)}`);
