@@ -24,8 +24,8 @@ function fibonacciMemo(num, memo) {
 
 let resultado = [];
 
-for(let i = 0; i < 8; i++) {
-    resultado.push(fibonacci(i));
+for(let i = 0; i < 100; i++) {
+    resultado.push(fibonacciMemo(i));
 }
 
 alert(resultado.join(" → "));
