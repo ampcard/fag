@@ -32,14 +32,14 @@
             if (tamanho == "P") {
                 perda = 3.3;
                 // soma o percentual de perda na qtde de fio e depois subtrai pelo valor inicial de perda
-                return (((arr[0] + (arr[0] * (perda / 100))) - arr[0]) / 1000).toFixed(2);
+                return (arr[0] * (perda / 100)/ 1000).toFixed(2);
             } else if (tamanho == "M") {
                 perda = 4.25;
-                return (((arr[1] + (arr[1] * (perda / 100))) - arr[1]) / 1000).toFixed(2);
+                return (arr[1] * (perda / 100) / 1000).toFixed(2);
             } else if (tamanho == "G") {
                 perda_cm = 42000;
-                percentual_perda = ((perda_cm) / 9986).toFixed(2);
-                return [percentual_perda, (((arr[2] + (arr[2] * (percentual_perda / 100))) - arr[2]) / 1000).toFixed(2)];
+                percentual_perda = (perda_cm / 9986).toFixed(2);
+                return [percentual_perda, (arr[2] * (percentual_perda / 100) / 1000).toFixed(2)];
             } else {}
         }
         
