@@ -32,13 +32,13 @@
             if (tamanho == "P") {
                 perda = 3.3;
                 // soma o percentual de perda na qtde de fio e depois subtrai pelo valor inicial de perda
-                return (arr[0] * (perda / 100)/ 1000).toFixed(2);
+                return (arr[0] * (perda / 100) / 1000).toFixed(2);
             } else if (tamanho == "M") {
                 perda = 4.25;
                 return (arr[1] * (perda / 100) / 1000).toFixed(2);
             } else if (tamanho == "G") {
-                perda_cm = 42000;
-                percentual_perda = (perda_cm / 9986).toFixed(2);
+                let perda_cm = 42000;
+                let percentual_perda = (perda_cm / 9986).toFixed(2);
                 return [percentual_perda, (arr[2] * (percentual_perda / 100) / 1000).toFixed(2)];
             } else {}
         }
@@ -71,7 +71,7 @@
                 alert("Perda fio casaco M: " + perda + " quilômetros");
                 Continuar();
             } else if (opcao == "C") {
-                total = CalcularMetragemFio(unidades)[3];
+                total = CalcularMetragemFio(unidades)[3] / 1000;
                 alert("Quantidade total de fio utilizado: " + total + " quilômetros");
                 Continuar();
             } else if (opcao == "D") {
