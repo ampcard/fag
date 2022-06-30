@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova Segunda Chamada André</title>
+</head>
+<body>
+    <script>
+        function userInput() {
+            const data1 = window.prompt("Insira a primeira data no formato dd/mm/aaaa").split("/");
+            const data2 = window.prompt("Insira a segunda data no formato dd/mm/aaaa").split("/");
+    
+            if (data1.length != 3 || data2.length != 3) {
+                alert("Data inválida!");
+                userInput();
+            }
+
+            for (let i of data1) {
+                if (isNaN(i)) {
+                    alert("Data inválida!");
+                    userInput();
+                }
+            }
+
+            for (let i of data2) {
+                if (isNaN(i)) {
+                    alert("Data inválida!");
+                    userInput();
+                }
+            }
+
+            let opcao = window.prompt(`A) Quantidade de dias no intervalo informado.
+B) Quantidade de meses neste intervalo.
+C) Quantidade de horas neste intervalo.`).toUpperCase();
+
+            switch(opcao) {
+                case "A":
+                    alert("Quantidade de dias neste intervalo: " + alternativaA(data1, data2));
+                    break;
+                case "B":
+                    alert("Quantidade de meses neste intervalo: " + alternativaB(alternativaA(data1, data2)));
+                    break;
+                case "C":
+                    alert("Quantidade de horas neste intervalo: " + alternativaC(alternativaA(data1, data2)));
+                    break;
+                default:
+                    alert("Opção inválida!");
+                    userInput();
+            }
+        }
+
+        function alternativaA(data1, data2) {
+            let dias = -1;
+
+            if (Math.abs(data1[2] - data2[2]) == 0) {
+                if (Math.abs(data1[1] - data2[1]) == 0) {
+                    dias = Math.abs(data1[0] - data2[0]);
+                } else {
+                    dias =  Math.abs(data1[1] - data2[1]) * 30;
+                }
+            } else {
+                dias = (Math.abs(data1[2] - data2[2]) * 365) + (Math.abs(data1[1] - data2[1]) * 30);
+            }
+
+            return dias;
+        }
+
+
+        function alternativaB(dias) {
+            return parseInt(dias / 30);
+        }
+
+
+        function alternativaC(dias) {
+            return dias * 24;
+        }
+
+
+        userInput();
+    </script>
+</body>
+</html>
