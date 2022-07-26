@@ -15,13 +15,9 @@
 
         let saldo = (saldo_devedor_inicial + cobrancas - limite);
 
-        let limite_excedido = false;
-
         if (saldo > limite) {
-            limite_excedido = true;
+            console.log("Conta: " + numero_conta + "\nLimite de crédito: R$" + limite.toFixed(2) + "\nLimite de Crédito Excedido");
         }
-
-        limite_excedido ? console.log("Conta: " + numero_conta + "\nLimite de crédito: R$" + limite.toFixed(2) + "\nLimite de Crédito Excedido") : {};
     </script>
 </body>
 </html>
