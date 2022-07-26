@@ -1,11 +1,9 @@
 function sum(arr, n) {
-    // Only change code below this line
     if (n <= 0) {
         return 1;
     } else {
         return sum(arr, n - 1) + arr[n - 1];
     }
-    // Only change code above this line
 }
 
 /*
@@ -14,7 +12,6 @@ function sum(arr, n) {
 ###############################################################################################
 */
 
-// Setup
 const contacts = [
     {
         firstName: "Akira",
@@ -43,7 +40,6 @@ const contacts = [
 ];
 
 function lookUpProfile(name, prop) {
-    // Only change code below this line
     for (let i = 0; i < contacts.length; i++) {
         if (name == contacts[i]["firstName"]) {
             if (contacts[i].hasOwnProperty(prop)) {
@@ -55,7 +51,6 @@ function lookUpProfile(name, prop) {
     }
 
     return "No such contact";
-    // Only change code above this line
 }
 
 console.log(lookUpProfile("Kristian", "lastName"));
