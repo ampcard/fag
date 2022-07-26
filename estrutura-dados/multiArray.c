@@ -15,7 +15,7 @@ int main() {
     for (i = 0; i < 2; i++) {
         for (j = 0; j < 3; j ++) {
             printf("%d ", arr[i][j]);
-            if (j == 2) {
+            if (j == 2) { // 1 2 3 \n
                 printf("\n");
             }
         }

@@ -8,7 +8,7 @@ int main() {
     userId[3] = 10004;
     userId[4] = 10005;
 
-    int arr[] = {10001, 10002, 10003, 10004, 10005};
+    int arr[] = {10001, 10002, 10003, 10004, 10005}; // this also works
 
     for (i = 0; i <= 4; i++) {
         printf("%i\n", userId[i]);
