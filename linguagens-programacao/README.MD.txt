@@ -1,0 +1,8 @@
+LINGUAGENS DE PROGRAMAÇÃO
+
+PROFESSOR: ANDRÉ HELENA
+
+DATA DE ENTREGA:
+
+22/09 - Primeiro Trabalho
+24/11 - Segundo Trabalho
